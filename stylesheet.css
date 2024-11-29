@@ -1,0 +1,869 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #081b29;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: #0ef;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(Purple\ Illustrated\ Mountain\ Desktop\ Wallpaper.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40PX;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 50px 10%;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#services {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.container {
+    padding: 90px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px auto;
+}
+
+.services-list div {
+    background-color: #081b29;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px rgba(1, 34, 144, 0.97), 1px 1px 40px rgba(0, 83, 184, 0.97);
+}
+
+.services-list div:hover {
+    transform: translateY(-10px);
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+}
+
+.read:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 95px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.Tecichal-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Tecichal-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Tecichal-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Tecichal-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.Tecichal-bars .bar .span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Tecichal-bars .bar .progres-line {
+    position: relative;
+    border: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(2, 0, 0, 5, 2) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Tecichal-bars .bar .progres-line span {
+    height: 100%;
+    background-color: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progres-line.html- span {
+    width: 90%;
+}
+
+.progres-line.css- span {
+    width: 60%;
+}
+
+.progres-line.javascript- span {
+    width: 80%;
+}
+
+.progres-line.java- span {
+    width: 85%;
+}
+
+.progres-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progres-line.html span::after {
+    content: 90%;
+}
+
+.progres-line.css span::after {
+    content: 90%;
+}
+
+.progres-line.javasript span::after {
+    content: 90%;
+}
+
+.progres-line.java span::after {
+    content: 90%;
+}
+
+.progres-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom-width: 0px;
+    border-top-color: #000000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+/* Styling bar diagram */
+.bar {
+    position: relative;
+    margin-top: 10px; /* Jarak antara ikon dan bar */
+    width: 100px; /* Lebar bar */
+    height: 10px; /* Tinggi bar */
+    background-color: #081b29; /* Warna latar belakang bar */
+}
+
+/* Animasi penampilan bar */
+@keyframes barAnimation {
+    from { width: 0; } /* Mulai dari lebar 0 */
+}
+
+/* Bar untuk HTML */
+.progres-line.html {
+    animation: barAnimation 1s ease forwards; /* Animasi penampilan bar */
+}
+
+/* Bar untuk CSS */
+.progres-line.css {
+    animation: barAnimation 1s ease forwards; /* Animasi penampilan bar */
+}
+
+/* Bar untuk Javascript */
+.progres-line.javascript {
+    animation: barAnimation 1s ease forwards; /* Animasi penampilan bar */
+}
+
+/* Bar untuk Java */
+.progres-line.java {
+    animation: barAnimation 1s ease forwards; /* Animasi penampilan bar */
+}
+
+/* Tekstur bar */
+.progres-line span {
+    position: absolute;
+    bottom: -20px; /* Jarak antara bar dan teks */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px; /* Ukuran teks */
+    color: #ededed; /* Warna teks */
+}
+
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Jarak antara bar */
+}
+
+.bar:last-child {
+    margin-right: 0; /* Hapus margin kanan pada bar terakhir */
+}
+
+.bar i {
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    font-size: 24px; /* Ukuran ikon */
+}
+
+.progres-line {
+    width: 100px; /* Ukuran lingkaran */
+    height: 100px; /* Ukuran lingkaran */
+    border-radius: 50%; /* Lingkaran */
+    border: 10px solid #00eeff; /* Warna lingkaran */
+    margin-top: 10px; /* Jarak antara ikon dan lingkaran */
+    position: relative; /* Diperlukan untuk penempatan teks persentase */
+}
+
+.progres-line::after {
+    content: attr(data-percent); /* Teks persentase */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px; /* Ukuran teks persentase */
+    color: #ededed; /* Warna teks persentase */
+}
+
+
+.radial-bars {
+    display: flex;
+    justify-content: space-around; /* Menyusun lingkaran secara horizontal */
+}
+
+.radial-bar {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.progress-bar {
+    transform: rotate(-90deg); /* Memulai garis progres dari arah atas */
+}
+
+.path,
+.progress-bar {
+    fill: none;
+    stroke-width: 20px; /* Lebar garis lingkaran */
+    stroke-linecap: round;
+}
+
+.path {
+    stroke: #081b29; /* Warna latar belakang */
+}
+
+.progress-bar {
+    stroke: #00eeff; /* Warna progres */
+    stroke-dasharray: 502; /* Panjang garis lingkaran */
+    stroke-dashoffset: 502; /* Panjang garis lingkaran */
+    animation: animate 2s forwards; /* Animasi durasi 2 detik */
+}
+
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #ededed;
+}
+
+.text {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: #ededed;
+    text-align: center;
+}
+
+@keyframes animate {
+    to {
+        stroke-dashoffset: calc(502 - (502 * var(--percentage)) / 100); /* Sesuaikan panjang garis progres dengan presentasi */
+    }
+}
+
+
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.path {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+.radial-bar .precentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 5% 0;
+    }
+    .home-content {
+        max-width: 100%;
+    }
+    .navbar a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    .about {
+        grid-template-columns: 1fr;
+        padding: 50px 5%;
+    }
+    .about-text h2 {
+        font-size: 40px;
+    }
+    .about-text h4 {
+        font-size: 24px;
+    }
+    .about-text p {
+        font-size: 18px;
+    }
+}
+
+/* Additional CSS for Contact Section */
+.contact {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.contact h1 {
+    margin-bottom: 70px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 300px;
+}
+
+.contact-info i {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+.contact-form {
+    margin-top: 50px;
+}
+
+.text-box,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #081b29;
+    color: #ededed;
+}
+
+.text-box::placeholder,
+textarea::placeholder {
+    color: #ededed;
+}
+
+.text-box:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0ef;
+    box-shadow: 0 0 5px #0ef;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-box:hover {
+    background-color: cyan;
+}
+.skills {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.skill {
+    width: 120px;
+    text-align: center;
+}
+
+.bar {
+    margin-top: 40px;
+}
+
+.bar .info {
+    margin-bottom: 5px;
+}
+
+.bar .span {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.progres-line {
+    position: relative;
+    border: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #081b29;
+}
+
+.progres-line span {
+    height: 100%;
+    background-color: #0ef;
+    border-radius: 50%;
+    display: block;
+    animation: animateProgress 1s forwards;
+}
+
+@keyframes animateProgress {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.progres-line span::after {
+    position: absolute;
+    content: attr(data-percent) "%";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Adjust the percentage for each skill */
+.progres-line.html- span {
+    width: 90%;
+    animation-delay: 1s;
+}
+
+.progres-line.css- span {
+    width: 60%;
+    animation-delay: 1.2s;
+}
+
+.progres-line.javascript- span {
+    width: 80%;
+    animation-delay: 1.4s;
+}
+
+.progres-line.java- span {
+    width: 85%;
+    animation-delay: 1.6s;
+}
