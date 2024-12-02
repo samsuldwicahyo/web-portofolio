@@ -7,6 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
         loop: true
     });
 });
+function showDevelopmentMessage() {
+    const isConfirmed = confirm("Maaf, fitur ini masih dalam pengembangan. Apakah Anda ingin kembali?");
+    if (isConfirmed) {
+        console.log("User memilih untuk kembali.");
+    } else {
+        console.log("User memilih untuk tetap di halaman.");
+    }
+}
+
 // main.js
 
 // Function to toggle the active class on navbar links
