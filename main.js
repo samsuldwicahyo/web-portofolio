@@ -165,4 +165,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         });
-        
+        const showCertsBtn = document.getElementById('showCertsBtn');
+        const sertifikatGallery = document.getElementById('sertifikatGallery');
+    
+        // Tambahkan event listener pada tombol
+        showCertsBtn.addEventListener('click', () => {
+            // Toggle visibility sertifikat (tampilkan atau sembunyikan)
+            if (sertifikatGallery.style.display === "none") {
+                sertifikatGallery.style.display = "block";  // Tampilkan sertifikat
+            } else {
+                sertifikatGallery.style.display = "none";   // Sembunyikan sertifikat
+            }
+        });

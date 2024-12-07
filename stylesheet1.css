@@ -428,28 +428,40 @@ section {
     margin-top: 10px;
     color: #b0b0b0;
 }
-
-/* Portfolio Section */
 .portfolio {
     text-align: center;
+    padding: 20px;
 }
 
 .portfolio-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px; /* Menggunakan gap untuk jarak antar elemen */
 }
 
 .portfolio-box {
-    width: 30%;
-    margin-bottom: 20px;
+    flex: 1 1 calc(30% - 20px); /* Fleksibel, lebar 30% dengan mempertimbangkan jarak */
+    max-width: 30%; /* Maksimal 30% lebar */
     position: relative;
+    overflow: hidden; /* Menjaga elemen dalam batas kotak */
+    aspect-ratio: 1/1; /* Memastikan semua kotak memiliki rasio yang sama */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-box img {
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga proporsionalitas gambar */
     border-radius: 10px;
-    transition: 0.3s;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-box:hover img {
@@ -464,6 +476,11 @@ section {
     color: #fff;
     text-align: center;
     display: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
 }
 
 .portfolio-box:hover .portfolio-info {
@@ -478,11 +495,200 @@ section {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transition: 0.3s;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
 }
 
 .portfolio-box:hover .overlay {
     opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .portfolio-box {
+        flex: 1 1 calc(45% - 20px); /* Lebar 45% untuk layar medium */
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-box {
+        flex: 1 1 calc(100% - 20px); /* Lebar penuh untuk layar kecil */
+        max-width: 100%;
+    }
+}
+
+#experience {
+    background-color: #121212;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-box {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.experience-box:hover {
+    background: #272727;
+    transform: translateY(-5px);
+}
+
+.experience-box h3 {
+    font-size: 20px;
+    color: #00eeff;
+}
+
+.experience-box p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.experience-box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00eeff;
+    text-decoration: none;
+}
+
+.experience-box a:hover {
+    text-decoration: underline;
+}
+
+.experience-box img {
+    margin-top: 10px;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Achievements Section */
+#achievements {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-box {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-box:hover {
+    background: #272727;
+    transform: translateY(-5px);
+}
+
+.achievement-box h3 {
+    font-size: 20px;
+    color: #00eeff;
+}
+
+.achievement-box p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.achievement-box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00eeff;
+    text-decoration: none;
+}
+
+.achievement-box a:hover {
+    text-decoration: underline;
+}
+
+.achievement-box img {
+    margin-top: 10px;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Certificates Section */
+#certificates {
+    background-color: #121212;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificate-box {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-box:hover {
+    background: #272727;
+    transform: translateY(-5px);
+}
+
+.certificate-box h3 {
+    font-size: 20px;
+    color: #00eeff;
+}
+
+.certificate-box p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.certificate-box a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00eeff;
+    text-decoration: none;
+}
+
+.certificate-box a:hover {
+    text-decoration: underline;
+}
+
+.certificate-box img {
+    margin-top: 10px;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
 }
 #contact {
     text-align: center;
