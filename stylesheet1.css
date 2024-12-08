@@ -771,27 +771,7 @@ section {
 .contact-form .btn-box:hover {
     background: #00b3cc;
 }
-//footer
- footer {
-            background: #00eeff;
-            color: #121212;
-            padding: 10px 30px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 16px;
-            font-family: Arial, sans-serif;
-            position: relative;
-            cursor: pointer;
-        }
 
-        footer:hover {
-            background: #00b3cc;
-        }
-
-        footer i {
-            color: red;
-            margin-left: 5px;
-        }
 
 /* Media Queries */
 @media (max-width: 768px) {
